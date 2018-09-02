@@ -1,0 +1,21 @@
+<h1>New Participant</h1>
+<%= form_tag "/raffle_entries", method: :post do %>
+<p>First Name<input type="text" name="first_name" value=""> </p>
+<p>Last Name<input type="text" name="last_name" value=""> </p>
+<p>Email<input type="email" name="email" value=""> </p>
+<p>Phone<input type="phone" name="phone" value=""> </p>
+<p>
+  Exercise
+  <select name="exercise">
+    <option name="exercise" value="Push-Ups">Push-Ups</option>
+    <option name="exercise" value="Pull-Ups">Pull-Ups</option>
+    <option name="exercise" value="Sit-Ups">Sit-Ups</option>
+    <option name="exercise" value="Burpees">Burpees</option>
+  </select>
+
+</p>
+
+<p>Repititions<input type="integer" name="repetitions" value=""> </p>
+<p><input type="submit" value="Submit"> </p>
+
+<% end %>

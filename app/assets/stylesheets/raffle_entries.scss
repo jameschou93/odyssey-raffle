@@ -1,0 +1,19 @@
+// Place all the styles related to the raffle_entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.scores {
+  margin-top: 8%;
+  p {
+    margin-bottom: 0px;
+  }
+
+  #total {
+    font-size: 1000%;
+    color: white;
+
+  }
+  #rep-count {
+    font-size: 300%;
+    color: white;
+  }
+}
