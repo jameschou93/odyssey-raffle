@@ -11,11 +11,20 @@ class RaffleEntriesController < ApplicationController
   end
 
   def index
-    @scores = RaffleEntry.where("exercise <> ''").map {|n| n.repetitions.to_i}.sum
+    @scores = RaffleEntry.where("created_at > ?", 1.days.ago.beginning_of_day).map {|n| n.repetitions.to_i}.sum
     @pushups = RaffleEntry.where(exercise: "Push-Ups").map {|n| n.repetitions.to_i}.sum
     @pullups = RaffleEntry.where(exercise: "Pull-Ups").map {|n| n.repetitions.to_i}.sum
     @situps = RaffleEntry.where(exercise: "Sit-Ups").map {|n| n.repetitions.to_i}.sum
-
   end
 
+  def raffle_results
+    @results = RaffleEntry.where(winner: true)
+    render 'raffle_results.html.erb'
+  end
+
+  def draw
+    draw = RaffleEntry.all.shuffle.sample(20)
+    draw.map{|winner| winner.update(winner: true)}
+    redirect_to '/results'
+  end
 end

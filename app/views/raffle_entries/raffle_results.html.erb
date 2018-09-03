@@ -1,0 +1,19 @@
+<h1>Our Winners</h1>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Name</th>
+  </tr>
+  <% @results.each do |winner| %>
+    <tr>
+      <td><%= winner.email %></td>
+      <td><%= winner.phone %></td>
+      <td><%= winner.first_name %> <%= winner.last_name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= form_tag '/draw', method: :patch do%>
+<input type="submit" value="Draw Winners">
+<% end %>
