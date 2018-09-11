@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-header {
-  background: #00E0FF;
+  background: "orange";
   height: 800px;
 }
 @media screen and (max-width: 768px) {
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-testimonial {
   padding: 7em 0;
-  background: #f2f2f2;
+  background: "orange";
 }
 .fh5co-testimonial .review i {
   color: #d9d9d9;
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #get-started {
   padding: 7em 0;
-  background: #00E0FF;
+  background: "orange";
 }
 #get-started .fh5co-heading h2 {
   margin-bottom: 20px;
