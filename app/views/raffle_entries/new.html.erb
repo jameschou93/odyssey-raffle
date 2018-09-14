@@ -1,22 +1,20 @@
 <h1>New Participant</h1>
 <%= form_tag "/raffle_entries", method: :post do %>
-<p>First Name<input type="text" name="first_name" value=""> </p>
-<p>Last Name<input type="text" name="last_name" value=""> </p>
-<p>Email<input type="email" name="email" value=""> </p>
-<p>Phone<input type="tel" name="phone" value=""> </p>
+<p><input type="text" name="first_name" placeholder="First Name" value=""> </p>
+<p><input type="text" name="last_name" placeholder="Last Name" value=""> </p>
+<p><input type="email" name="email" placeholder="Email" value=""> </p>
+<p><input type="tel" name="phone" placeholder="phone number" value=""> </p>
 <p>
-  Exercise
   <select name="exercise">
-    <option name="exercise" value="Lunges">Push-Ups</option>
+    <option name="exercise" value="Lunges">Lunges</option>
     <option name="exercise" value="Pull-Ups">Pull-Ups</option>
-    <option name="exercise" value="Crunches">Sit-Ups</option>
-    <option name="exercise" value="Squats">Burpees</option>
-    <option name="exercise" value="Push-Ups">Burpees</option>
+    <option name="exercise" value="Crunches">Crunches</option>
+    <option name="exercise" value="Squats">Squats</option>
+    <option name="exercise" value="Push-Ups">Push-Ups</option>
   </select>
-
 </p>
 
-<p>Repititions<input type="integer" name="repetitions" value=""> </p>
+<p><input type="integer" name="repetitions" placeholder="reps" value=""> </p>
 <p><input type="submit" value="Submit"> </p>
 
 <% end %>

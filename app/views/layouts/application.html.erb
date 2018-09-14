@@ -8,51 +8,40 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
-  <!-- Animate.css -->
-  	<link rel="stylesheet" href="/css/animate.css">
-  	<!-- Icomoon Icon Fonts-->
-  	<link rel="stylesheet" href="/css/icomoon.css">
-  	<!-- Bootstrap  -->
-  	<link rel="stylesheet" href="/css/bootstrap.css">
+
+
   	<!-- Theme style  -->
   	<link rel="stylesheet" href="/css/style.css">
-
-  	<!-- Owl Carousel  -->
-  	<link rel="stylesheet" href="/css/owl.carousel.min.css">
-  	<link rel="stylesheet" href="/css/owl.theme.default.min.css">
-
   	<!-- Modernizr JS -->
   	<script src="js/modernizr-2.6.2.min.js"></script>
     <body>
 
-  	<header id="fh5co-header">
+  	<header id="home">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
           <% flash.each do |name, message| %>
-            <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+            <div class="alert alert-<%= name %> alert-dismissible flash" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <%= message %>
           <% end %>
         </div>
       </div>
   		<div class="container">
-  			<div class="col-md-6 col-sm-6">
-  				<div class="intro"><h1></h1>
+  			<div class="col-md-6 col-sm-6" id="title">
+  				<div class="intro">
+            <h1 id="fh5co-logo">Odyssey House Fitness Raffle</h1>
             <p>
+              <ul>
               <% if admin_signed_in? %>
               <!-- New Entry -->
-              <ul>
-              <li class="btn btn-primary"><%= link_to "New Entry", "raffle_entries/new" %> </li>
-              <li class="btn btn-primary"> <%= link_to "Logout", "/admins/sign_out", method: :delete %></li>
-              <% else %>
-              <li class="btn btn-primary"> <%= link_to "Login", "/admins/sign_in" %> </li>
-              <% end %>
+                <li class="btn btn-primary"><%= link_to "New Entry", "raffle_entries/new" %> </li>
+                <li class="btn btn-primary"> <%= link_to "Logout", "/admins/sign_out", method: :delete %></li>
+                <li class="btn btn-primary"> <%= link_to "Raffle Drawing", "/results" %></li>
+                <% else %>
+                <li class="btn btn-primary"> <%= link_to "Login", "/admins/sign_in" %> </li>
+                <% end %>
               </ul>
             </p>
-          <p></p>
-
-
-  					<h1 id="fh5co-logo"><a href="index.html">Odyssey House Fitness Raffle</a></h1>
   				</div>
   			</div>
         <div class="col-md-6 col-sm-6 scores">
@@ -60,25 +49,6 @@
         </div>
   		</div>
   	</header>
-
-
-
-  	<!-- jQuery -->
-  	<script src="js/jquery.min.js"></script>
-  	<!-- jQuery Easing -->
-  	<script src="js/jquery.easing.1.3.js"></script>
-  	<!-- Bootstrap -->
-  	<script src="js/bootstrap.min.js"></script>
-  	<!-- Waypoints -->
-  	<script src="js/jquery.waypoints.min.js"></script>
-  	<!-- Carousel -->
-  	<script src="js/owl.carousel.min.js"></script>
-
-  	<!-- MAIN JS -->
-  	<script src="js/main.js"></script>
-
   	</body>
-  <body>
 
-  </body>
 </html>

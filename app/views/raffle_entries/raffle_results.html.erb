@@ -1,12 +1,15 @@
 <h1>Our Winners</h1>
 <table>
+  <thead>
+
   <tr>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Name</th>
-  </tr>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Name</th>
+    </tr>
+  </thead>
   <% @results.each do |winner| %>
-    <tr>
+    <tr scope="row">
       <td><%= winner.email %></td>
       <td><%= winner.phone %></td>
       <td><%= winner.first_name %> <%= winner.last_name %></td>
@@ -15,5 +18,5 @@
 </table>
 
 <%= form_tag '/draw', method: :patch do%>
-<input type="submit" value="Draw Winners">
+<input class="btn btn-primary submit" type="submit" value="Draw Winners">
 <% end %>

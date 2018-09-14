@@ -1,19 +1,62 @@
 // Place all the styles related to the raffle_entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.scores {
-  margin-top: 8%;
-  p {
-    margin-bottom: 0px;
+html{
+  background: no-repeat center center fixed;
+  background-image: url("/assets/american-blue.jpg");
+  table {
+      background-color: white;
+      border: orange solid;
+      width: 100%;
+      th {
+        text-align: left;
+        border: solid gray;
+        color: white;
+        padding: 2%;
+        background: orange;
+      }
+
+  }
+  td, th {
+    padding: 0;
+    border: solid gray;
+  }
+  h1{
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  .flash{
+    background: skyblue
+  }
+  .submit{
+    margin-top: 5%;
+  }
+  .scores {
+    margin-top: 8%;
+    p {
+      margin-bottom: 0px;
+    }
+
+    #total {
+      font-size: 1000%;
+      color: white;
+
+    }
+    #rep-count {
+      font-size: 300%;
+      color: white;
+    }
+  }
+  #title {
+    padding-top: 25%;
+
   }
 
-  #total {
-    font-size: 1000%;
-    color: white;
+  #home {
+    background: no-repeat center center fixed;
+    background-image: url("/assets/american-blue.jpg")
 
-  }
-  #rep-count {
-    font-size: 300%;
-    color: white;
   }
 }

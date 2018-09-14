@@ -25,8 +25,14 @@ class RaffleEntriesController < ApplicationController
   end
 
   def draw
-    draw = RaffleEntry.all.shuffle.sample(20)
-    draw.map{|winner| winner.update(winner: true)}
-    redirect_to '/results'
+    if current_admin && current_admin.master == 1
+      draw = RaffleEntry.all.shuffle.sample(20)
+      draw.map{|winner| winner.update(winner: true)}
+      redirect_to '/results'
+    else
+      flash[:error] = "No Permission To Draw Raffle"
+      @results = RaffleEntry.where(winner: true)
+      render 'raffle_results.html.erb'
+    end
   end
 end
