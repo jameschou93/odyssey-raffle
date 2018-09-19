@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html{
   background: no-repeat center center fixed;
-  background-image: url("/assets/american-blue.jpg");
+  background-image: image-url("american-blue.jpg");
   table {
       background-color: white;
       border: orange solid;
@@ -56,7 +56,7 @@ html{
 
   #home {
     background: no-repeat center center fixed;
-    background-image: url("/assets/american-blue.jpg")
+    background-image: image-url("american-blue.jpg")
 
   }
 }
