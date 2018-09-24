@@ -3,15 +3,19 @@
   <thead>
 
   <tr>
+    <% if current_admin.master == 1 %>
       <th>Email</th>
       <th>Phone</th>
+    <% end %>
       <th>Name</th>
     </tr>
   </thead>
   <% @results.each do |winner| %>
     <tr scope="row">
+      <% if current_admin.master == 1 %>
       <td><%= winner.email %></td>
       <td><%= winner.phone %></td>
+      <% end %>
       <td><%= winner.first_name %> <%= winner.last_name %></td>
     </tr>
   <% end %>

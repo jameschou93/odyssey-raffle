@@ -1,24 +1,26 @@
-# README
+# Odyssey Raffle App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails app that allows users to create raffle entries and admin level users to draw raffle winners. The user model is generated and handled by **devise** and styling utlizes **bootstrap**
 
-Things you may want to cover:
+Submitting Raffle form creates a new instance of RaffleEntry which can be validated for uniqueness when running the drawing function (in this case, one applicant can submit more than once since they are allowed to participate as many times as possible).
 
-* Ruby version
+![Raffle Entry Screenshot](app/assets/images/entry-sc.png)
 
-* System dependencies
+Raffle winners are randomly selected by changing the the **:winner** attribute(boolean) of a RaffleEntry to
+**true**
 
-* Configuration
+Winners table will show contact information only if user has master permission.
 
-* Database creation
+### Master View
+![master permission](app/assets/images/with-master.png)
+### Typical View
+![no permission](app/assets/images/no-master.png)
+## Update Pipeline
 
-* Database initialization
+- Allow users to create, name, and apply their own raffles
 
-* How to run the test suite
+- Allow users to set number of raffle Winners
 
-* Services (job queues, cache servers, search engines, etc.)
+- Allow users to set criteria/filter for raffle winners
 
-* Deployment instructions
-
-* ...
+- Set up mailer to allow user to contact winners about results and their prizes
